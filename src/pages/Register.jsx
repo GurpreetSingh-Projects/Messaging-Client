@@ -1,10 +1,10 @@
 export default function Register() {
   return (
-    <div className="flex h-100vh place-content-center align-center justify-center bg-blue-400 m-auto">
-      <div className="flex">
-        <span className="hi">Messaging Client</span>
+    <div className="formContainer">
+      <div className="formWrapper">
+        <div className="logo">Messaging Client</div>
         <span className="title">Register</span>
-        <form>
+        <form className="">
           <input type="text" placeholder="Enter username"></input>
           <input type="email" placeholder="Email"></input>
           <input type="password" placeholder="Passoword"></input>

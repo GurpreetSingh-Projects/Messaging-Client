@@ -1,3 +1,4 @@
+import "./style.scss";
 import Register from "./pages/register";
 function App() {
   return (
