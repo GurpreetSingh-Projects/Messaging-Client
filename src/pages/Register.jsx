@@ -1,3 +1,4 @@
+import Add from "../img/addAvatar.png";
 export default function Register() {
   return (
     <div className="formContainer">
@@ -9,7 +10,10 @@ export default function Register() {
           <input type="email" placeholder="Email"></input>
           <input type="password" placeholder="Passoword"></input>
           <input type="file" id="file" style={{ display: "none" }}></input>
-          <label htmlFor="file"></label>
+          <label htmlFor="file">
+            <img src={Add} alt="" />
+            <span>Add your Avatar</span>
+          </label>
           <button>Sign up</button>
         </form>
         <p>Already have an account? Login</p>

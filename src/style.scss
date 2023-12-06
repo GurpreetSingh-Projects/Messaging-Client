@@ -1,5 +1,5 @@
 .formContainer {
-  background-color: #0088cc;
+  background-color: #4267b2;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -16,12 +16,12 @@
     align-items: center;
 
     .logo {
-      color: #0088ccde;
+      color: #4267b2;
       font-weight: 700;
       font-size: 30px;
     }
     .title {
-      color: #0088ccbe;
+      color: #4267b2;
       font-size: 20px;
       margin-top: -10px;
       font-weight: 500;
@@ -33,9 +33,10 @@
 
       input {
         padding: 15px;
+        padding-bottom: 5px;
         border: none;
         width: 250px;
-        border-bottom: 1px solid #0088cc6e;
+        border-bottom: 1px solid #4267b2;
         &::placeholder {
           color: rgb(175, 175, 175);
         }
@@ -43,7 +44,7 @@
       button {
         padding: 8px 5px 8px 5px;
         border-radius: 5px;
-        background-color: #0088cca9;
+        background-color: #4267b2;
         color: white;
         border: none;
         cursor: pointer;
@@ -52,10 +53,22 @@
       :active {
         opacity: 50%;
       }
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #4267b2;
+      }
+      label img {
+        height: 30px;
+        width: 30px;
+        margin: 10px 20px;
+      }
     }
     p {
       color: rgb(148, 148, 148);
-      font-size: 12px;
+      font-size: 14px;
       margin-top: 10px;
     }
   }
