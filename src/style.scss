@@ -73,3 +73,27 @@
     }
   }
 }
+
+.home {
+  background-color: #4267b2;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  .container {
+    display: flex;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 65%;
+    height: 80%;
+    overflow: hidden;
+    .sidebar {
+      flex: 1;
+      background-color: #001f5c;
+    }
+    .chat {
+      flex: 2;
+    }
+  }
+}
