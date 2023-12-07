@@ -92,6 +92,15 @@
       flex: 1;
       background-color: #001f5c;
     }
+    .navbar {
+      display: flex;
+      align-items: center;
+      background-color: #000b20;
+      height: 50px;
+      padding: 10px;
+      justify-content: space-between;
+      font-weight: 500;
+    }
     .chat {
       flex: 2;
     }
