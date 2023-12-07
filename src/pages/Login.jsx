@@ -1,4 +1,3 @@
-import Add from "../img/addAvatar.png";
 export default function Login() {
   return (
     <div className="formContainer">
@@ -10,7 +9,7 @@ export default function Login() {
           <input type="password" placeholder="Passoword"></input>
           <button>Sign in</button>
         </form>
-        <p>Don't have an account? Signup</p>
+        <p>New user? Signup</p>
       </div>
     </div>
   );
