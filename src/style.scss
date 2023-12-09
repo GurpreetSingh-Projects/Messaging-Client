@@ -124,6 +124,13 @@
           cursor: pointer;
         }
       }
+      .search {
+        border-bottom: 1px solid gray;
+        .searchForm {
+          input {
+          }
+        }
+      }
     }
     .chat {
       flex: 2;
