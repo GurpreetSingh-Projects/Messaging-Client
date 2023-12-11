@@ -2,7 +2,7 @@ export default function Search() {
   return (
     <div className="search">
       <div className="searchForm">
-        <input type="text" className="text" />
+        <input type="text" className="text" placeholder="Search user" />
       </div>
       <div className="userChat">
         <img
@@ -11,6 +11,7 @@ export default function Search() {
         />
         <div className="userChatInfo">
           <span>Jane</span>
+          <p>hello</p>
         </div>
       </div>
     </div>
