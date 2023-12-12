@@ -182,6 +182,16 @@
           height: 24px;
         }
       }
+      .messages {
+        background: #4267b2;
+        padding: 10px;
+        height: calc(100%-160px);
+      }
+      .input {
+        height: 50px;
+        background-color: white;
+        padding: 10px;
+      }
     }
   }
 }
