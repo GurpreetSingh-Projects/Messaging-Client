@@ -12,6 +12,7 @@ export default function Chat() {
           <img src={Cam} alt="" />
           <img src={Add} alt="" />
           <img src={More} alt="" />
+          {/* comment */}
         </div>
       </div>
     </div>
