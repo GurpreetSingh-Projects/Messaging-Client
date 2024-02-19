@@ -140,11 +140,16 @@
           }
         }
       }
+
       .userChat {
         padding: 10px;
         display: flex;
         align-items: center;
         gap: 10px;
+        &:hover {
+          background-color: #000c24;
+          cursor: pointer;
+        }
 
         img {
           width: 50px;
@@ -166,6 +171,7 @@
     }
     .chat {
       flex: 2;
+
       .chatInfo {
         height: 50px;
         background-color: #001f5c;
@@ -175,6 +181,7 @@
         padding: 10px;
         color: lightgrey;
       }
+
       .chatIcons {
         display: flex;
         gap: 10px;
@@ -182,18 +189,105 @@
           height: 24px;
         }
       }
+      ::-webkit-scrollbar {
+        display: none;
+      }
       .messages {
         background-color: #99b2e5;
         padding: 10px;
         height: calc(100% - 100px);
+        overflow: scroll;
+        // overflow-x: hidden;
+
+        .message {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 20px;
+          .messageInfo {
+            display: flex;
+            flex-direction: column;
+            color: rgb(0, 0, 0, 0.5);
+            font-size: 12px;
+            font-weight: 300;
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 999px;
+              object-fit: cover;
+            }
+          }
+          .messageContent {
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: black;
+            p {
+              background-color: #fff;
+              padding: 10px 20px;
+              border-radius: 0 10px 10px 10px;
+              max-width: max-content;
+            }
+
+            img {
+              width: 50%;
+              border-radius: 10px;
+              box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.53);
+            }
+          }
+          &.owner {
+            flex-direction: row-reverse;
+            .messageContent {
+              align-items: flex-end;
+              p {
+                border-radius: 10px 0px 10px 10px;
+                background-color: #4267b2;
+                color: white;
+              }
+              img {
+                border-radius: 10px;
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.53);
+              }
+            }
+          }
+        }
       }
       .input {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         height: 50px;
         background-color: white;
         padding: 10px;
         color: black;
+        input {
+          width: 65%;
+          border: none;
+          outline: none;
+          color: grey;
+          font-size: 16px;
+
+          &::placeholder {
+            color: lightgray;
+          }
+        }
+        .send {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img {
+            height: 24px;
+            cursor: pointer;
+          }
+          button {
+            border: none;
+            padding: 8px 20px;
+            color: white;
+            background-color: #4267b2;
+            cursor: pointer;
+            border-radius: 10px;
+          }
+        }
       }
     }
   }
