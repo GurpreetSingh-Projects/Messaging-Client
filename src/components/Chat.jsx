@@ -1,7 +1,7 @@
 import Cam from "../img/cam.png";
 import Add from "../img/cam.png";
 import More from "../img/more.png";
-import Messages from "./Message";
+import Messages from "./Messages";
 import Input from "./Input";
 export default function Chat() {
   return (
@@ -12,9 +12,10 @@ export default function Chat() {
           <img src={Cam} alt="" />
           <img src={Add} alt="" />
           <img src={More} alt="" />
-          {/* comment */}
         </div>
       </div>
+      <Messages />
+      <Input />
     </div>
   );
 }

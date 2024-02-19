@@ -183,14 +183,17 @@
         }
       }
       .messages {
-        background: #4267b2;
+        background-color: #99b2e5;
         padding: 10px;
-        height: 100%;
+        height: calc(100% - 100px);
       }
       .input {
+        display: flex;
+        align-items: center;
         height: 50px;
         background-color: white;
         padding: 10px;
+        color: black;
       }
     }
   }
