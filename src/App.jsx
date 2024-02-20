@@ -6,9 +6,9 @@ function App() {
   return (
     <>
       <div>
-        <Home />
+        {/* <Home /> */}
         {/* <Login /> */}
-        {/* <Register /> */}
+        <Register />
       </div>
     </>
   );
