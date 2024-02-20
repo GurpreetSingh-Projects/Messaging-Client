@@ -8,7 +8,7 @@ export default function Navbar() {
           alt=""
         />
         <span>John</span>
-        <button className="logo">Logout</button>
+        <button className="logout">Logout</button>
       </div>
     </div>
   );
