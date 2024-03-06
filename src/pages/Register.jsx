@@ -1,11 +1,13 @@
 import Add from "../img/addAvatar.png";
+import { useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, storage, db } from "../firebase";
-import { useState } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 export default function Register() {
   const [err, setErr] = useState(false);
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const displayName = e.target[0].value;
@@ -14,27 +16,28 @@ export default function Register() {
     const file = e.target[3].files[0];
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
+
       const storageRef = ref(storage, displayName);
       const uploadTask = uploadBytesResumable(storageRef, file);
-      uploadTask.on(
-        (err) => {
-          setErr(true);
-        },
-        (err) => {
-          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
-            await updateProfile(res.user, {
-              displayName,
-              photoURL: downloadURL,
-            });
-            await setDoc(doc(db, "users", res.user.uid), {
-              uid: res.user.uid,
-              displayName,
-              email,
-              photoURL: downloadURL,
-            });
+
+      uploadTask.on(() => {
+        // Upload completed successfully, now we can get the download URL
+        getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+          await updateProfile(res.user, {
+            displayName,
+            photoURL: downloadURL,
           });
-        }
-      );
+          await setDoc(doc(db, "users", res.user.uid), {
+            uid: res.user.uid,
+            displayName,
+            email,
+            downloadURL,
+          });
+
+          await setDoc(doc(db, "userChats", res.user.uid), {});
+          navigate("/");
+        });
+      });
     } catch (err) {
       setErr(true);
     }
