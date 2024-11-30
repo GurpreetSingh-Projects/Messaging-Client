@@ -125,7 +125,10 @@
             display: none;
           }
         }
-
+        .logout {
+          padding: 0px 10px;
+          border-radius: 99px;
+        }
         .user {
           display: flex;
           gap: 10px;
